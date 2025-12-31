@@ -1,0 +1,63 @@
+AutoFlow Expert 🚀
+AutoFlow Expert é uma ferramenta de automação inteligente desenvolvida em Python para extração de leads (potenciais clientes) diretamente do Google Maps. O sistema realiza varreduras em múltiplos nichos de mercado em cidades específicas, coletando dados essenciais para prospecção comercial.
+
+Este projeto utiliza Playwright para navegação automatizada e Pandas para o gerenciamento e exportação robusta de dados.
+
+✨ Funcionalidades
+Varredura Multi-Nicho: Mapeia mais de 30 categorias de negócios (restaurantes, oficinas, clínicas, etc.) de forma sequencial.
+
+Extração Completa: Coleta nome da empresa, telefone, endereço e cidade.
+
+Filtros Inteligentes:
+
+Filtro de empresas que não possuem site (ideal para agências de web design).
+
+Filtro para capturar apenas números de celular (foco em WhatsApp).
+
+Sistema de Backup em Tempo Real: Salva cada lead individualmente em um arquivo CSV de segurança, evitando perda de dados em caso de queda de conexão.
+
+Prevenção de Duplicidade: Sistema de memória que ignora leads já processados na mesma sessão ou em backups anteriores.
+
+Relatório Final: Gera um arquivo consolidado em formato .xlsx (Excel) ao final da operação.
+
+🛠️ Tecnologias Utilizadas
+Python 3.10+
+
+Playwright: Automação de navegador (Chromium).
+
+Pandas: Processamento de dados e exportação para Excel/CSV.
+
+Asyncio: Gerenciamento de tarefas assíncronas para maior performance.
+
+🚀 Como Executar
+Clone o repositório:
+
+Bash
+
+git clone https://github.com/casettarafael/autoflow-expert.git
+cd autoflow-expert
+Instale as dependências:
+
+Bash
+
+pip install playwright pandas openpyxl
+playwright install chromium
+Execute o script:
+
+Bash
+
+python main.py
+Interação:
+
+Digite o nome da cidade quando solicitado (ex: "São Paulo" ou "Marília").
+
+Os resultados serão salvos automaticamente na pasta /output.
+
+⚙️ Configurações
+Você pode personalizar o comportamento do robô diretamente nas variáveis de configuração no topo do arquivo main.py:
+
+Python
+
+FILTRAR_EMPRESAS_COM_SITE = False  # Mude para True para ignorar quem já tem site
+FILTRAR_APENAS_CELULAR = False     # Mude para True para focar em WhatsApp
+Aviso: Este projeto deve ser utilizado com responsabilidade, respeitando os termos de serviço das plataformas e as leis de privacidade de dados vigentes.
